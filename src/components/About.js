@@ -1,31 +1,30 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 export default function About() {
-    const [myStyle,setMyStyle] = useState({
-        color:"white",
-        backgroundColor : "black"
-    });
+  const [myStyle, setMyStyle] = useState({
+    color: "white",
+    backgroundColor: "black",
+  });
 
-    const [btnText, setBtnText] = useState('Light Mode');
+  const [btnText, setBtnText] = useState("Light Mode");
 
-    const toggleStyle = () => {
-        if(myStyle.color=="white") {
-            setMyStyle({
-                color:"black",
-                backgroundColor : "white"
-            })
-            setBtnText('Dark Mode')
-        }
-        else{
-            setMyStyle({
-                color:"white",
-                backgroundColor : "black"
-            });
-            setBtnText('Dark Mode');
-        }
+  const toggleStyle = () => {
+    if (myStyle.color == "white") {
+      setMyStyle({
+        color: "black",
+        backgroundColor: "white",
+      });
+      setBtnText("Dark Mode");
+    } else {
+      setMyStyle({
+        color: "white",
+        backgroundColor: "black",
+      });
+      setBtnText("Dark Mode");
     }
+  };
 
-    return (
+  return (
     <>
       <div className="container my-2 mx-2" style={myStyle}>
         <h1>About Us</h1>
@@ -53,11 +52,11 @@ export default function About() {
               <div className="accordion-body" style={myStyle}>
                 <strong>This is the first item's accordion body.</strong> It is
                 shown by default, until the collapse plugin adds the appropriate
-                classNamees that we use to style each element. These classNamees control
-                the overall appearance, as well as the showing and hiding via
-                CSS transitions. You can modify any of this with custom CSS or
-                overriding our default variables. It's also worth noting that
-                just about any HTML can go within the{" "}
+                classNamees that we use to style each element. These classNamees
+                control the overall appearance, as well as the showing and
+                hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth
+                noting that just about any HTML can go within the{" "}
                 <code>.accordion-body</code>, though the transition does limit
                 overflow.
               </div>
@@ -87,10 +86,10 @@ export default function About() {
                 <strong>This is the second item's accordion body.</strong> It is
                 hidden by default, until the collapse plugin adds the
                 appropriate classNamees that we use to style each element. These
-                classNamees control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the{" "}
+                classNamees control the overall appearance, as well as the
+                showing and hiding via CSS transitions. You can modify any of
+                this with custom CSS or overriding our default variables. It's
+                also worth noting that just about any HTML can go within the{" "}
                 <code>.accordion-body</code>, though the transition does limit
                 overflow.
               </div>
@@ -120,10 +119,10 @@ export default function About() {
                 <strong>This is the third item's accordion body.</strong> It is
                 hidden by default, until the collapse plugin adds the
                 appropriate classNamees that we use to style each element. These
-                classNamees control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the{" "}
+                classNamees control the overall appearance, as well as the
+                showing and hiding via CSS transitions. You can modify any of
+                this with custom CSS or overriding our default variables. It's
+                also worth noting that just about any HTML can go within the{" "}
                 <code>.accordion-body</code>, though the transition does limit
                 overflow.
               </div>
@@ -131,7 +130,11 @@ export default function About() {
           </div>
         </div>
         <div className="container">
-          <button onClick={toggleStyle} type="button" className="btn btn-primary my-2">
+          <button
+            onClick={toggleStyle}
+            type="button"
+            className="btn btn-primary my-2"
+          >
             {btnText}
           </button>
         </div>

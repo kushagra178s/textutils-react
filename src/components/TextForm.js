@@ -46,25 +46,25 @@ export default function TextFrorm(props) {
             onChange={handleOnChange}
             id="myBox"
             rows="8"
-            // style={{ backgroundColor : (props.mode === 'dark' ? 'white' : 'grey'), color : 'white'}}
+            style={{ backgroundColor : (props.mode === "light" ? "white" : "grey"), color : 'white'}}
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-2" onClick={handleUpCLick}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleUpCLick}>
           UpperCase IT
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleLoCLick}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleLoCLick}>
           LowerCase IT
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleClearCLick}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleClearCLick}>
           Clear IT
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleMlCLick}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleMlCLick}>
           Multiply IT
         </button>
       </div>
       <div className="container my-2" >
         <h1 >Your Input Text Summary </h1>
-        <p>{text.split(" ").length} Words && {text.length} Characters</p>
+        <p>{text.split(" ").filter((element)=>{return element.length!=0}).length} Words && {text.length} Characters</p>
         <h2>Preview</h2>
         <p> {text.length===0?'Enter some text for preview':text}</p>
       </div>

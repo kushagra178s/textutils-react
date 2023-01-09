@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, a } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 export default function Navbar(props) {
   let myStyle = {
@@ -27,48 +27,48 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a to="/" className="nav-link active" aria-current="page" >
+                <Link to="/" className="nav-link active" aria-current="page" >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a to='/about' className="nav-link active">
+                <Link to='/about' className="nav-link active">
                   About
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
-                <a
+                <Link
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  to="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Dropdown
-                </a>
+                </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="#">
                       Action
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="#">
                       Another action
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="#">
                       Something else here
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled">Disabled</a>
+                <Link className="nav-link disabled">Disabled</Link>
               </li>
             </ul>
             {/* <form className="d-flex" role="search">
